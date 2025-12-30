@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:tailwind": "npx vite build --watch",
+    "dev:shopify": "shopify theme dev"
   },
   "keywords": [],
   "author": "",
