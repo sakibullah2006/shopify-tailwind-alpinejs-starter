@@ -6,106 +6,107 @@
 @source "../../snippets/*.liquid";
 
 @theme {
-    --color-brand: #121212;
+  --color-brand: #121212;
 }
 
 @layer base {
-    /* Box sizing for all elements */
-    * {
-        box-sizing: border-box;
-    }
+  /* Box sizing for all elements */
+  * {
+    box-sizing: border-box;
+  }
 
-    /* Body layout */
-    body {
-        @apply flex flex-col;
-        min-height: 100svh;
-        font-family: var(--font-primary--family);
-        background-color: var(--color-background);
-        color: var(--color-foreground);
-    }
+  /* Body layout */
+  body {
+    @apply flex flex-col;
+    min-height: 100svh;
+    font-family: var(--font-primary--family);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
 
-    /* Scroll lock when dialog/details are open */
-    html:has(dialog[scroll-lock][open], details[scroll-lock][open]) {
-        overflow: hidden;
-    }
+  /* Scroll lock when dialog/details are open */
+  html:has(dialog[scroll-lock][open], details[scroll-lock][open]) {
+    overflow: hidden;
+  }
 
-    /* Media elements */
-    img,
-    picture,
-    video,
-    canvas,
-    svg {
-        @apply block;
-        max-width: 100%;
-        height: auto;
-    }
+  /* Media elements */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    @apply block;
+    max-width: 100%;
+    height: auto;
+  }
 
-    /* Form inputs inherit font */
-    input,
-    textarea,
-    select {
-        font: inherit;
-        border-radius: var(--style-border-radius-inputs);
-    }
+  /* Form inputs inherit font */
+  input,
+  textarea,
+  select {
+    font: inherit;
+    border-radius: var(--style-border-radius-inputs);
+  }
 
-    /* Select styling */
-    select {
-        background-color: var(--color-background);
-        color: currentcolor;
-    }
+  /* Select styling */
+  select {
+    background-color: var(--color-background);
+    color: currentcolor;
+  }
 
-    /* Dialog styling */
-    dialog {
-        background-color: var(--color-background);
-        color: var(--color-foreground);
-    }
+  /* Dialog styling */
+  dialog {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
 
-    /* Text wrapping */
-    p {
-        text-wrap: pretty;
-    }
+  /* Text wrapping */
+  p {
+    text-wrap: pretty;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        overflow-wrap: break-word;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
 
-    /* Hide empty paragraphs */
-    p:empty {
-        display: none;
-    }
+  /* Hide empty paragraphs */
+  p:empty {
+    display: none;
+  }
 }
 
 @layer components {
-    /* Section layout utilities */
-    .shopify-section {
-        --content-width: min(
-            calc(var(--page-width) - var(--page-margin) * 2),
-            calc(100% - var(--page-margin) * 2)
-        );
-        --content-margin: minmax(var(--page-margin), 1fr);
-        --content-grid: var(--content-margin) var(--content-width) var(--content-margin);
+  /* Section layout utilities */
+  .shopify-section {
+    --content-width: min(
+      calc(var(--page-width) - var(--page-margin) * 2),
+      calc(100% - var(--page-margin) * 2)
+    );
+    --content-margin: minmax(var(--page-margin), 1fr);
+    --content-grid: var(--content-margin) var(--content-width)
+      var(--content-margin);
 
-        position: relative;
-        display: grid;
-        grid-template-columns: var(--content-grid);
-        width: 100%;
-    }
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--content-grid);
+    width: 100%;
+  }
 
-    .shopify-section > * {
-        grid-column: 2;
-    }
+  .shopify-section > * {
+    grid-column: 2;
+  }
 
-    .shopify-section > .full-width {
-        grid-column: 1 / -1;
-    }
+  .shopify-section > .full-width {
+    grid-column: 1 / -1;
+  }
 }
 
 /* Alpine.js cloak to prevent flash of hidden content */
 [x-cloak] {
-    display: none !important;
+  display: none !important;
 }
