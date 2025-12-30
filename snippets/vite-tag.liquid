@@ -1,0 +1,6 @@
+{%- liquid
+  assign css_file = 'main.css'
+  assign js_file = 'main.js'
+-%}
+<link rel="stylesheet" href="{{ css_file | asset_url }}">
+<script src="{{ js_file | asset_url }}" defer></script>
