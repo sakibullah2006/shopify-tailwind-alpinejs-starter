@@ -1,11 +1,3 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "overrides": [
-    {
-      "files": "*.liquid",
-      "options": {
-        "parser": "html"
-      }
-    }
-  ]
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

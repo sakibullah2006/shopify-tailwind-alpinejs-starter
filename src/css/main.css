@@ -17,7 +17,7 @@
 
   /* Body layout */
   body {
-    @apply flex flex-col;
+    @apply flex w-0 flex-col text-2xl text-red-300;
     min-height: 100svh;
     font-family: var(--font-primary--family);
     background-color: var(--color-background);
