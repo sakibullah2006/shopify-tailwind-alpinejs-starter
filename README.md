@@ -35,7 +35,15 @@ cd my-shopify-theme
 pnpm install
 ```
 
-3. **Start development**
+3. **Set Shopify Store name in .shopify**
+
+```bash
+echo "your-store-name" > .shopify
+```
+
+Replace `your-store-name` with your actual Shopify store name.
+
+4. **Start development**
 
 Open two terminal windows:
 
