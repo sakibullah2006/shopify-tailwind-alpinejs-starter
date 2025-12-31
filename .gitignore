@@ -10,7 +10,7 @@ Thumbs.db
 node_modules/
 
 # Shopify CLI files
-.shopify/
+.shopify
 
 ## Release files
 release
